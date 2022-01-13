@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: ['stylelint-scss', 'stylelint-order'],
   extends: ['stylelint-config-standard', 'stylelint-config-recommended-scss'],
   rules: {
@@ -15,3 +15,5 @@ module.exports = {
   },
   ignoreFiles: ['**/node_modules/**']
 }
+
+module.exports = config
