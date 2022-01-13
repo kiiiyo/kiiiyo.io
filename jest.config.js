@@ -13,6 +13,10 @@ const config = {
   testPathIgnorePatterns: ['<rootDir>/config/test/utils/', '<rootDir>/node_modules/', '<rootDir>/.next/'],
   // コンパイル対象外のフォルダーを指定
   transformIgnorePatterns: ['/node_modules/'],
+  moduleNameMapper: {
+    // Aliasの設定
+    '^@/(.+)': '<rootDir>/src/$1'
+  },
   transform: {
     '.+\\.(t|j)sx?$': [
       '@swc/jest',
