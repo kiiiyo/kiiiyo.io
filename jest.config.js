@@ -1,8 +1,11 @@
-/**
- * @type {import("@jest/types").Config.InitialOptions}
- */
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './'
+})
+
 const config = {
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
 
   testMatch: ['**/*.test.js', '**/*.test.ts', '**/*.test.tsx'],
 
@@ -10,11 +13,7 @@ const config = {
   setupFilesAfterEnv: ['<rootDir>/config/test/utils/setup.ts'],
 
   // 除外するフォルダーを指定する
-  testPathIgnorePatterns: [
-    '<rootDir>/src/test/utils/', // セットアップが入っているフォルダーは除外する
-    '<rootDir>/node_modules/',
-    '<rootDir>/.next/'
-  ],
+  testPathIgnorePatterns: ['<rootDir>/config/test/utils/', '<rootDir>/node_modules/', '<rootDir>/.next/'],
 
   // コンパイル対象外のフォルダーを指定
   transformIgnorePatterns: ['/node_modules/'],
@@ -47,4 +46,4 @@ const config = {
   }
 }
 
-module.exports = config
+module.exports = createJestConfig(config)

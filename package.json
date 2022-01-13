@@ -1,6 +1,10 @@
 {
-  "name": "my-app",
+  "name": "kiiiyo.io",
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
