@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   // 不要なCSSを削除するためのpurge設定
   mode: 'jit',
   // 設定ファイル内でのCSSのみをbuild時に最適化
@@ -9,3 +9,4 @@ module.exports = {
   },
   plugins: []
 }
+module.exports = config
