@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import TopPage from './index' // create-next-appで生成されたページコンポーネント
+import TopPage from '../../pages/index'
 
 describe('トップページのテスト', () => {
   test("'Welcome to Next.js!'が表示されているか", async () => {
