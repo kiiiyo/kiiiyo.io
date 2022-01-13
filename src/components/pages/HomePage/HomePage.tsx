@@ -6,10 +6,9 @@ export const HomePage: FC = () => {
   return (
     <Templates.GenericTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'HOME', isMobile: false }} />}
+      globalFooter={<Organisms.GlobalFooter />}
     >
-      <div className="mt-6">
-        <p>Welcome to Next.js!</p>
-      </div>
+      <p>Welcome to Next.js!</p>
     </Templates.GenericTemplate>
   )
 }
