@@ -1,11 +1,8 @@
 import type { NextPage } from 'next'
-
+//
+import { Pages } from '@/components'
 const Home: NextPage = () => {
-  return (
-    <div>
-      <p>Welcome to Next.js!</p>
-    </div>
-  )
+  return <Pages.HomePage />
 }
 
 export default Home
