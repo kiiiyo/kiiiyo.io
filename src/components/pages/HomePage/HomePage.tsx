@@ -1,12 +1,12 @@
 import { FC } from 'react'
 //
-import { Templates } from '@/components'
-
-//export type HomePageProps = {}
+import { Templates, Organisms } from '@/components'
 
 export const HomePage: FC = () => {
   return (
-    <Templates.GenericTemplate>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'HOME', isMobile: false }} />}
+    >
       <div className="mt-6">
         <p>Welcome to Next.js!</p>
       </div>
