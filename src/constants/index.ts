@@ -12,7 +12,7 @@ export const GLOBAL_MENU_LIST = [
     path: '/about'
   },
   {
-    name: 'SEARCH',
+    name: 'PORTFOLIO',
     label: 'Portfolio',
     path: '/portfolio'
   },
