@@ -4,12 +4,12 @@ import { Templates, Organisms } from '@/components'
 
 export const HomePage: FC = () => {
   return (
-    <Templates.GenericTemplate
+    <Templates.HomeTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'HOME' }} />}
       globalFooter={<Organisms.GlobalFooter />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
-      <p>Welcome to Next.js!</p>
-    </Templates.GenericTemplate>
+      <Organisms.HeroSection />
+    </Templates.HomeTemplate>
   )
 }

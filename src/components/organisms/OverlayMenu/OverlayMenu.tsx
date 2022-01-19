@@ -54,7 +54,14 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
             return (
               <li key={index}>
                 <Link href={menuItem.path}>
-                  <a className="block py-4 text-2xl font-bold text-white">{menuItem.label}</a>
+                  <a
+                    onClick={() => {
+                      onCloseButtonClick('HIDE')
+                    }}
+                    className="block py-4 text-2xl font-bold text-white"
+                  >
+                    {menuItem.label}
+                  </a>
                 </Link>
               </li>
             )
