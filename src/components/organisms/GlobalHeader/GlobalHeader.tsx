@@ -13,7 +13,7 @@ export type MenuItemType = {
   path: string
 }
 
-export type CurrentPage = 'HOME' | 'ABOUT'
+export type CurrentPage = 'HOME' | 'ABOUT' | 'PORTFOLIO' | 'CONTACT' | '404'
 
 export type GlobalHeaderProps = {
   state: {
@@ -63,10 +63,13 @@ export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
           <div className="hidden w-full md:block md:w-auto">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               {GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
+                const isCurrent = menuItem.name === currentPage
                 return (
                   <li key={index}>
                     <Link href={menuItem.path}>
-                      <a className="block py-2 pr-4 pl-3 text-gray-700">{menuItem.label}</a>
+                      <a className={`block py-2 pr-4 pl-3 text-gray-700 ${isCurrent ? 'font-bold' : ''}`}>
+                        {menuItem.label}
+                      </a>
                     </Link>
                   </li>
                 )
