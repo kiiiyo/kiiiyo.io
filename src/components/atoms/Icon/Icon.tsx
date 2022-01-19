@@ -1,7 +1,8 @@
-import { MenuIcon, XIcon as CloseIcon } from '@heroicons/react/solid'
+import { MenuIcon, XIcon as CloseIcon, LinkIcon } from '@heroicons/react/solid'
 
 export {
   // Core
   MenuIcon,
-  CloseIcon
+  CloseIcon,
+  LinkIcon
 }

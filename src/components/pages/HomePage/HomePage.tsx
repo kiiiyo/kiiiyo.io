@@ -10,6 +10,9 @@ export const HomePage: FC = () => {
       OverlayMenu={<Organisms.OverlayMenu />}
     >
       <Organisms.HeroSection />
+      <Organisms.AboutSection />
+      <Organisms.PortfolioSection />
+      <Organisms.ContactSection />
     </Templates.HomeTemplate>
   )
 }
