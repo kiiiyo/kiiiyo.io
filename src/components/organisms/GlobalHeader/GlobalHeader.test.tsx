@@ -4,6 +4,6 @@ import { Organisms } from '@/components'
 
 describe('Organisms: GlobalHeader component', () => {
   test('render', async () => {
-    render(<Organisms.GlobalHeader state={{ currentPage: 'HOME', isMobile: false }} />)
+    render(<Organisms.GlobalHeader state={{ currentPage: 'HOME' }} />)
   })
 })
