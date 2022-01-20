@@ -12,7 +12,9 @@ export const HomePage: FC = () => {
       <Organisms.HeroSection />
       <Organisms.AboutSection />
       <Organisms.PortfolioSection />
-      <Organisms.ContactSection />
+      <Organisms.ContactSection>
+        <Organisms.ContactCard />
+      </Organisms.ContactSection>
     </Templates.HomeTemplate>
   )
 }

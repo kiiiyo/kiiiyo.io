@@ -1,8 +1,6 @@
 
 {
-
  "editor.codeActionsOnSave": {
-
     "source.fixAll.stylelint": true
  },
   "[css]": {
@@ -12,5 +10,13 @@
     "editor.formatOnSave": false
   },
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "tailwindCSS.emmetCompletions": true,
 }

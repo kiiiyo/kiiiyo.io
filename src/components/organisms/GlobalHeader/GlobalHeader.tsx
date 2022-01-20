@@ -23,7 +23,7 @@ export type GlobalHeaderProps = {
 
 export type GlobalHeaderPresenterProps = GlobalHeaderProps & {
   state: {
-    isMobile: Boolean
+    isMobile: boolean
     overlayMenuDisplay: Context.AppContext.OverlayMenuDisplayType
   }
   actions: {
@@ -34,16 +34,16 @@ export type GlobalHeaderPresenterProps = GlobalHeaderProps & {
 // Presenter
 
 export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
-  state: { isMobile, overlayMenuDisplay, currentPage },
+  state: { isMobile, currentPage },
   actions: { onMenuButtonClick }
 }) => {
   return (
     <>
       <nav className="bg-white shadow">
-        <div className="container flex flex-wrap justify-between items-center mx-auto py-2.5 px-4">
-          <div className="flex items-center justify-between">
+        <div className="container flex flex-wrap justify-between items-center py-2.5 px-4 mx-auto">
+          <div className="flex justify-between items-center">
             <Link href="/">
-              <a className="text-2xl font-bold text-gray-800 lg:text-3xl hover:text-gray-700 ">Brand</a>
+              <a className="text-2xl font-bold text-gray-800 hover:text-gray-700 lg:text-3xl">Brand</a>
             </Link>
           </div>
 
@@ -61,7 +61,7 @@ export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
           )}
 
           <div className="hidden w-full md:block md:w-auto">
-            <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+            <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 md:text-sm md:font-medium">
               {GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
                 const isCurrent = menuItem.name === currentPage
                 return (
