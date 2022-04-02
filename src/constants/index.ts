@@ -1,4 +1,4 @@
-export const MOBILE_BREAK_POINT_SIZE = 768
+export const MOBILE_BREAK_POINT_SIZE = 767
 
 export const GLOBAL_MENU_LIST = [
   {

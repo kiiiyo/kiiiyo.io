@@ -13,11 +13,11 @@ export type MenuItemType = {
   path: string
 }
 
-export type OverlayMenuProps = {}
+//export type OverlayMenuProps = {}
 
-export type OverlayMenuPresenterProps = OverlayMenuProps & {
+export type OverlayMenuPresenterProps = {
   state: {
-    isMobile: Boolean
+    isMobile: boolean
     overlayMenuDisplay: Context.AppContext.OverlayMenuDisplayType
   }
   actions: {
@@ -32,8 +32,8 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
   actions: { onCloseButtonClick }
 }) => {
   return isMobile && overlayMenuDisplay === 'SHOW' ? (
-    <div className="fixed z-10 inset-0 overflow-y-auto">
-      <div className=" min-h-screen flex items-center px-4 bg-gray-500 transition-opacity">
+    <div className="overflow-y-auto fixed inset-0 z-10">
+      <div className="flex items-center px-4 min-h-screen bg-gray-500 transition-opacity">
         <div className="fixed top-0 left-0 py-2.5 px-4">
           <Link href="/">
             <a className="text-2xl font-bold text-white">Brand</a>
@@ -46,15 +46,22 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
               onCloseButtonClick('HIDE')
             }}
           >
-            <Atoms.Icon.CloseIcon className="text-white h-8" />
+            <Atoms.Icon.CloseIcon className="h-8 text-white" />
           </button>
         </div>
-        <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+        <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 md:text-sm md:font-medium">
           {GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
             return (
               <li key={index}>
                 <Link href={menuItem.path}>
-                  <a className="block py-4 text-2xl font-bold text-white">{menuItem.label}</a>
+                  <a
+                    onClick={() => {
+                      onCloseButtonClick('HIDE')
+                    }}
+                    className="block py-4 text-2xl font-bold text-white"
+                  >
+                    {menuItem.label}
+                  </a>
                 </Link>
               </li>
             )
@@ -65,7 +72,7 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
   ) : null
 }
 
-export const OverlayMenu: FC<OverlayMenuProps> = () => {
+export const OverlayMenu: FC = () => {
   const {
     state: { overlayMenuDisplay, isMobile },
     actions: { handleOverlayMenuDisplay }

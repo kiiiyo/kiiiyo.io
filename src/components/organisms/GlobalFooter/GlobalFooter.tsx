@@ -7,8 +7,8 @@ import { FC } from 'react'
 
 export const GlobalFooter: FC = () => {
   return (
-    <div className="bg-white">
-      <div className="container py-6 px-4 mx-auto">
+    <div className="bg-white py-8 lg:pt-24 pb-36 lg:pb-48">
+      <div className="container px-4 mx-auto">
         <div className="flex flex-wrap">
           <div className="mb-6 mr-12">
             <a className="text-2xl font-bold text-gray-800  lg:text-3xl hover:text-gray-700 " href="#">

@@ -8,10 +8,10 @@ export type OverlayMenuDisplayType = 'SHOW' | 'HIDE'
 
 export type State = {
   screenSize: {
-    width: Number
-    height: Number
+    width: number
+    height: number
   }
-  isMobile: Boolean
+  isMobile: boolean
   overlayMenuDisplay: OverlayMenuDisplayType
 }
 
@@ -36,6 +36,7 @@ const initContextValue: AppContextValueType = {
     isMobile: false
   },
   actions: {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     handleOverlayMenuDisplay: () => {}
   }
 }
