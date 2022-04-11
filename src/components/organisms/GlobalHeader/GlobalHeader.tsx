@@ -63,7 +63,9 @@ export const GlobalHeaderPresenter: FC<TGlobalHeaderPresenterProps> = ({
         <div className="container flex flex-wrap justify-between items-center px-4 mx-auto h-16">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <a className="text-xl font-bold text-gray-800 hover:text-gray-700 lg:text-2xl">{Constant.SITE_NAME}</a>
+              <a className="text-xl font-bold text-neutral-800 hover:text-neutral-700 active:text-neutral-900 lg:text-2xl">
+                {Constant.SITE_NAME}
+              </a>
             </Link>
           </div>
 
@@ -90,15 +92,15 @@ export const GlobalHeaderPresenter: FC<TGlobalHeaderPresenterProps> = ({
                       <a
                         className={`flex justify-center items-center px-2 h-16 ${
                           isCurrent
-                            ? 'font-bold text-neutral-700 hover:text-neutral-800 active:text-neutral-900'
-                            : 'text-neutral-500 hover:text-neutral-600 active:text-neutral-800'
+                            ? 'font-bold text-neutral-800 hover:text-neutral-700 active:text-neutral-900'
+                            : 'text-neutral-600 hover:text-neutral-500 active:text-neutral-700'
                         }`}
                       >
                         {menuItem.label}
                       </a>
                     </Link>
                     {isCurrent && (
-                      <div className="absolute bottom-0 w-full h-1 bg-neutral-700 hover:bg-neutral-900"></div>
+                      <div className="absolute bottom-0 w-full h-1 after:text-neutral-900 bg-neutral-800 hover:bg-neutral-700"></div>
                     )}
                   </li>
                 )
