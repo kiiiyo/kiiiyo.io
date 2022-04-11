@@ -6,7 +6,7 @@ export const PortfolioCollectionPage: FC = () => {
   return (
     <Templates.GenericTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'PORTFOLIO' }} />}
-      globalFooter={<Organisms.GlobalFooter />}
+      globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'PORTFOLIO' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
       <p>PortfolioCollectionPage</p>

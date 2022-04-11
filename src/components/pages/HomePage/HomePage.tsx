@@ -6,7 +6,7 @@ export const HomePage: FC = () => {
   return (
     <Templates.HomeTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'HOME' }} />}
-      globalFooter={<Organisms.GlobalFooter />}
+      globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'HOME' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
       <Organisms.HeroSection />
