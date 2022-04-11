@@ -1,10 +1,9 @@
 import React, { FC, createContext, useState, useCallback, useEffect } from 'react'
 //
-import { MOBILE_BREAK_POINT_SIZE } from '@/constants'
+import { Constant } from '@/configs'
 
 // Interface
-
-export type OverlayMenuDisplayType = 'SHOW' | 'HIDE'
+export type TOverlayMenuDisplay = 'SHOW' | 'HIDE'
 
 export type State = {
   screenSize: {
@@ -12,21 +11,21 @@ export type State = {
     height: number
   }
   isMobile: boolean
-  overlayMenuDisplay: OverlayMenuDisplayType
+  overlayMenuDisplay: TOverlayMenuDisplay
 }
 
 export type Actions = {
-  handleOverlayMenuDisplay: (condition: OverlayMenuDisplayType) => void
+  handleOverlayMenuDisplay: (condition: TOverlayMenuDisplay) => void
 }
 
-export type AppContextValueType = {
+export type TAppContextValue = {
   state: State
   actions: Actions
 }
 
 // Context
 
-const initContextValue: AppContextValueType = {
+const initContextValue: TAppContextValue = {
   state: {
     overlayMenuDisplay: 'HIDE',
     screenSize: {
@@ -41,14 +40,13 @@ const initContextValue: AppContextValueType = {
   }
 }
 
-export const AppContext = createContext<AppContextValueType>(initContextValue)
+export const AppContext = createContext<TAppContextValue>(initContextValue)
 
 // Hooks
 
-export const useAppContext = (): AppContextValueType => {
+export const useAppContext = (): TAppContextValue => {
   // State
-  const [overlayMenuDisplay, setOverlayMenuDisplay] = useState<OverlayMenuDisplayType>('HIDE')
-
+  const [overlayMenuDisplay, setOverlayMenuDisplay] = useState<TOverlayMenuDisplay>('HIDE')
   const [screenSize, setScreenSize] = useState({
     width: 0,
     height: 0
@@ -81,7 +79,7 @@ export const useAppContext = (): AppContextValueType => {
   return {
     state: {
       screenSize,
-      isMobile: screenSize.width <= MOBILE_BREAK_POINT_SIZE,
+      isMobile: screenSize.width <= Constant.MOBILE_BREAK_POINT_SIZE,
       overlayMenuDisplay
     },
     actions: { handleOverlayMenuDisplay }
@@ -89,7 +87,6 @@ export const useAppContext = (): AppContextValueType => {
 }
 
 // Provider
-
 export const AppContextProvider: FC = ({ children }) => {
   const { state, actions } = useAppContext()
   return <AppContext.Provider value={{ state, actions }}>{children}</AppContext.Provider>

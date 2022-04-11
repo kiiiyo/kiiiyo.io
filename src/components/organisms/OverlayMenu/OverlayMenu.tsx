@@ -1,32 +1,28 @@
 import { FC } from 'react'
 import Link from 'next/link'
 //
-import { GLOBAL_MENU_LIST } from '@/constants'
+import { Constant } from '@/configs'
 import { Hooks, Context } from '@/features'
 import { Atoms } from '@/components'
 
 // Interface
-
 export type MenuItemType = {
   name: string
   label: string
   path: string
 }
 
-//export type OverlayMenuProps = {}
-
 export type OverlayMenuPresenterProps = {
   state: {
     isMobile: boolean
-    overlayMenuDisplay: Context.AppContext.OverlayMenuDisplayType
+    overlayMenuDisplay: Context.AppContext.TOverlayMenuDisplay
   }
   actions: {
-    onCloseButtonClick: (condition: Context.AppContext.OverlayMenuDisplayType) => void
+    onCloseButtonClick: (condition: Context.AppContext.TOverlayMenuDisplay) => void
   }
 }
 
 // Component
-
 export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
   state: { isMobile, overlayMenuDisplay },
   actions: { onCloseButtonClick }
@@ -50,7 +46,7 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
           </button>
         </div>
         <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 md:text-sm md:font-medium">
-          {GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
+          {Constant.GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
             return (
               <li key={index}>
                 <Link href={menuItem.path}>
