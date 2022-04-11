@@ -1,49 +1,69 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 //
-import { GLOBAL_MENU_LIST } from '@/constants'
+import { Constant } from '@/configs'
 import { Hooks, Context } from '@/features'
 import { Atoms } from '@/components'
 
 // Interface
-
-export type MenuItemType = {
+export type TMenuItem = {
   name: string
   label: string
   path: string
 }
 
-export type CurrentPage = 'HOME' | 'ABOUT' | 'PORTFOLIO' | 'CONTACT' | '404'
+// TODO:
+export type TCurrentPage = 'HOME' | 'ABOUT' | 'PORTFOLIO' | 'CONTACT' | 'NOT_FOUND'
 
-export type GlobalHeaderProps = {
+export type TGlobalHeaderProps = {
   state: {
-    currentPage: CurrentPage
+    currentPage: TCurrentPage
   }
 }
 
-export type GlobalHeaderPresenterProps = GlobalHeaderProps & {
+export type TGlobalHeaderPresenterProps = TGlobalHeaderProps & {
   state: {
     isMobile: boolean
-    overlayMenuDisplay: Context.AppContext.OverlayMenuDisplayType
+    overlayMenuDisplay: Context.AppContext.TOverlayMenuDisplay
   }
   actions: {
-    onMenuButtonClick: (condition: Context.AppContext.OverlayMenuDisplayType) => void
+    onMenuButtonClick: (condition: Context.AppContext.TOverlayMenuDisplay) => void
   }
+}
+
+// Container
+export const GlobalHeader: FC<TGlobalHeaderProps> = ({ state: { currentPage } }) => {
+  const {
+    state: { overlayMenuDisplay, isMobile },
+    actions: { handleOverlayMenuDisplay }
+  } = Hooks.App.useAppContext()
+
+  return (
+    <GlobalHeaderPresenter
+      state={{
+        currentPage,
+        isMobile,
+        overlayMenuDisplay
+      }}
+      actions={{
+        onMenuButtonClick: handleOverlayMenuDisplay
+      }}
+    />
+  )
 }
 
 // Presenter
-
-export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
+export const GlobalHeaderPresenter: FC<TGlobalHeaderPresenterProps> = ({
   state: { isMobile, currentPage },
   actions: { onMenuButtonClick }
 }) => {
   return (
     <>
       <nav className="bg-white shadow">
-        <div className="container flex flex-wrap justify-between items-center py-2.5 px-4 mx-auto">
+        <div className="container flex flex-wrap justify-between items-center px-4 mx-auto h-16">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <a className="text-2xl font-bold text-gray-800 hover:text-gray-700 lg:text-3xl">Brand</a>
+              <a className="text-xl font-bold text-gray-800 hover:text-gray-700 lg:text-2xl">{Constant.SITE_NAME}</a>
             </Link>
           </div>
 
@@ -62,15 +82,24 @@ export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
 
           <div className="hidden w-full md:block md:w-auto">
             <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 md:text-sm md:font-medium">
-              {GLOBAL_MENU_LIST.map((menuItem: MenuItemType, index: number) => {
+              {Constant.GLOBAL_MENU_LIST.map((menuItem: TMenuItem, index: number) => {
                 const isCurrent = menuItem.name === currentPage
                 return (
-                  <li key={index}>
+                  <li key={index} className="relative">
                     <Link href={menuItem.path}>
-                      <a className={`block py-2 pr-4 pl-3 text-gray-700 ${isCurrent ? 'font-bold' : ''}`}>
+                      <a
+                        className={`flex justify-center items-center px-2 h-16 ${
+                          isCurrent
+                            ? 'font-bold text-neutral-700 hover:text-neutral-800 active:text-neutral-900'
+                            : 'text-neutral-500 hover:text-neutral-600 active:text-neutral-800'
+                        }`}
+                      >
                         {menuItem.label}
                       </a>
                     </Link>
+                    {isCurrent && (
+                      <div className="absolute bottom-0 w-full h-1 bg-neutral-700 hover:bg-neutral-900"></div>
+                    )}
                   </li>
                 )
               })}
@@ -79,26 +108,6 @@ export const GlobalHeaderPresenter: FC<GlobalHeaderPresenterProps> = ({
         </div>
       </nav>
     </>
-  )
-}
-
-export const GlobalHeader: FC<GlobalHeaderProps> = ({ state: { currentPage } }) => {
-  const {
-    state: { overlayMenuDisplay, isMobile },
-    actions: { handleOverlayMenuDisplay }
-  } = Hooks.App.useAppContext()
-
-  return (
-    <GlobalHeaderPresenter
-      state={{
-        currentPage,
-        isMobile,
-        overlayMenuDisplay
-      }}
-      actions={{
-        onMenuButtonClick: handleOverlayMenuDisplay
-      }}
-    />
   )
 }
 
