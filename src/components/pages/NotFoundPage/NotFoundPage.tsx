@@ -5,8 +5,8 @@ import { Templates, Organisms } from '@/components'
 export const NotFoundPage: FC = () => {
   return (
     <Templates.GenericTemplate
-      globalHeader={<Organisms.GlobalHeader state={{ currentPage: '404' }} />}
-      globalFooter={<Organisms.GlobalFooter />}
+      globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'NOT_FOUND' }} />}
+      globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'NOT_FOUND' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
       <p>NotFoundPage</p>

@@ -6,7 +6,7 @@ export const ContactPage: FC = () => {
   return (
     <Templates.GenericTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'CONTACT' }} />}
-      globalFooter={<Organisms.GlobalFooter />}
+      globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'CONTACT' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
       <p>ContactPage</p>
