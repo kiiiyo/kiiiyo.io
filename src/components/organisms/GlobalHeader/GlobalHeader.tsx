@@ -7,6 +7,7 @@ import { Atoms } from '@/components'
 
 // Interface
 export type TMenuItem = {
+  emoji: string
   name: string
   label: string
   path: string
@@ -96,7 +97,8 @@ export const GlobalHeaderPresenter: FC<TGlobalHeaderPresenterProps> = ({
                             : 'text-neutral-600 hover:text-neutral-500 active:text-neutral-700'
                         }`}
                       >
-                        {menuItem.label}
+                        <span className="inline-block mr-3">{menuItem.emoji}</span>
+                        <span className="inline-block">{menuItem.label}</span>
                       </a>
                     </Link>
                     {isCurrent && (

@@ -5,6 +5,7 @@ import { Constant } from '@/configs'
 
 // Interface
 export type TMenuItem = {
+  emoji: string
   name: string
   label: string
   path: string
@@ -76,6 +77,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
                             isCurrent ? 'font-bold ' : ''
                           }`}
                         >
+                          <span className="inline-block mr-3">{menuItem.emoji}</span>
                           <span className="inline-block">{menuItem.label}</span>
                         </a>
                       </Link>

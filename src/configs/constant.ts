@@ -7,23 +7,27 @@ export const MOBILE_BREAK_POINT_SIZE = 767
 // TODO:
 export const GLOBAL_MENU_LIST = [
   {
+    emoji: '🏠',
     name: 'HOME',
-    label: '🏠 Home',
+    label: 'Home',
     path: '/'
   },
   {
+    emoji: '👾',
     name: 'ABOUT',
-    label: '👾 About',
+    label: ' About',
     path: '/about'
   },
   {
+    emoji: '🗂️',
     name: 'PORTFOLIO',
-    label: '🗂️ Portfolio',
+    label: 'Portfolio',
     path: '/portfolio'
   },
   {
+    emoji: '📬',
     name: 'CONTACT',
-    label: '📬 Contact',
+    label: 'Contact',
     path: '/contact'
   }
 ]
@@ -40,6 +44,10 @@ export const LINK_LIST = [
   {
     label: 'Zenn',
     path: 'https://zenn.dev/kiiiyo'
+  },
+  {
+    label: 'Note',
+    path: 'https://note.com/kiiiyo'
   },
   {
     label: 'LinkedIn',
