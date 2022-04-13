@@ -2,8 +2,11 @@ import { FC, Fragment } from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
 //
 import { Pages, Atoms } from '@/components'
+// TODO: MDXにする
+import { document } from './document'
 
 const Hero: FC = () => {
   return (
@@ -58,7 +61,9 @@ const PortfolioSpaceUiKitPage: NextPage = () => {
         </Fragment>
       }
     >
-      メイン
+      <div className="markdown">
+        <ReactMarkdown>{document}</ReactMarkdown>
+      </div>
     </Pages.PortfolioSinglePage>
   )
 }
