@@ -16,7 +16,7 @@ export const PortfolioSectionPresenter: FC = () => {
             <div className="bg-blue-500 rounded-xl border border-gray-100 hover:border-white shadow-lg hover:shadow-xl transition">
               <div className="flex justify-between items-center py-2.5 px-5 bg-white rounded-t-lg border-b border-neutral-200">
                 <div className="text-lg font-medium text-neutral-800">Teg App</div>
-                <Link href="/">
+                <Link href="/portfolios/teg-app">
                   <a>
                     <Atoms.Icon.LinkIcon className="w-5 h-5" />
                   </a>
@@ -37,6 +37,19 @@ export const PortfolioSectionPresenter: FC = () => {
               </div>
               <div className="flex justify-center items-center h-48">
                 <p className="text-6xl">🚀</p>
+              </div>
+            </div>
+            <div className="bg-neutral-400 rounded-xl border border-gray-100 hover:border-white shadow-lg hover:shadow-xl transition">
+              <div className="flex justify-between items-center py-2.5 px-5 bg-white rounded-t-lg border-b border-neutral-200">
+                <div className="text-lg font-medium text-neutral-800">Bit Bear Club</div>
+                <Link href="/portfolios/bit-bear-club">
+                  <a>
+                    <Atoms.Icon.LinkIcon className="w-5 h-5" />
+                  </a>
+                </Link>
+              </div>
+              <div className="flex justify-center items-center h-48">
+                <p className="text-6xl">🐻</p>
               </div>
             </div>
           </div>
