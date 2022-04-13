@@ -45,7 +45,7 @@ export const GlobalFooter: FC<TGlobalFooterProps> = ({ state: { currentPage } })
 // Presenter
 export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: { currentPage } }) => {
   return (
-    <footer>
+    <footer className="border-t-2 border-neutral-100">
       <div className="py-8 pb-36 bg-white lg:pt-24 lg:pb-48">
         <div className="container px-8 mx-auto md:px-6">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-8">
@@ -57,7 +57,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
                   </a>
                 </Link>
               </div>
-              <p className="my-4 text-sm">Kiiiyo&#39;s.IOのポートフォリオサイトです。</p>
+              <p className="my-4 text-lg text-neutral-400">Kiiiyo&#39;s Web Site.</p>
             </div>
             {/* */}
             <div>

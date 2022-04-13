@@ -4,6 +4,6 @@ import { Organisms } from '@/components'
 
 describe('Organisms: GlobalFooter component', () => {
   test('render', async () => {
-    render(<Organisms.GlobalFooter />)
+    render(<Organisms.GlobalFooter state={{ currentPage: 'HOME' }} />)
   })
 })
