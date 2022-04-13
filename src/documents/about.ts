@@ -2,9 +2,9 @@ export const document = `
 # 💡 Overview
 
 👋 オハコンバンニチハ👋  
-このサイトの運営者の情報を以下に掲載いたします。
+このサイトの運営者の「Kiiiyo」と申します。私の簡単な略歴をご紹介します。
 
-## ✍️ 基本情報
+## ℹ️ 基本情報
 
 - 氏名
   - 清田 隆志
@@ -21,7 +21,7 @@ export const document = `
 - 「**デザインとは現状を少しでも望ましいものに変えようとするための一連の行為である**」
 - 「**人生を見つけるためには、人生を浪費しなければならない。**」
 
-## この先やってみたいこと
+## ✨ この先やってみたいこと
 
 **「ジブンゴト」** として共感できるプロダクトの開発に携わりたいです。  
   
@@ -31,12 +31,12 @@ export const document = `
   
 今まで培ったUIデザインからフロントエンド実装(主にReact)、PdM、PjM、スクラムマスターなどの各ロールの経験をチームに貢献し、メンバーと共にプロダクトの成長・成功を実感したいです。  
 
-## 👾 各種アカウント
+## 🤖 各種アカウント
 
 [Github](https://github.com/kiiiyo) / [Twitter](https://twitter.com/kiiiyo) / [Zenn](https://zenn.dev/kiiiyo) / [Note](https://note.com/kiiiyo) / [Linkdin](https://www.linkedin.com/in/kiyota-takashi-95609222b/)
 / [Wantedly](https://www.wantedly.com/id/takashi_kiyota_jp)
 
-## スキルセット
+## 💪 スキルセット
 
 - デザインエンジニアとしてのデザイン領域と技術の橋渡し役
 - Webサイト・モバイルアプリのインターフェースデザイン
@@ -46,17 +46,17 @@ export const document = `
 - マルチテナント形態のSaaSプロダクトマネージメント
 - アジャイル開発の経験、スクラムマスターとしてのファシリテーター
 
-## 開発言語
+## 🖥️ 開発言語
 
 HTML / CSS / JavaScript / TypeScript / Node.js / Ruby
 
-## フレームワーク・その他
+## 🧰 フレームワーク・その他
 
 
-React / Strapi / Express / GraphQL / AWS / GCP / Firebase / Vite / Contentful / Algolia / Cypress / MUI / Bootstrap / Sentry / Blender / Maya
+React / Jest / Cypress / Strapi / Express / GraphQL / AWS / GCP / Firebase / Vite / Contentful / Algolia / MUI / Bootstrap / Sentry / Blender / Maya
 
 
-## 職務経歴概要
+## 🗂️ 職務経歴概要
 
 - クラスメソッド株式会社
 - フリーランス
@@ -66,7 +66,7 @@ React / Strapi / Express / GraphQL / AWS / GCP / Firebase / Vite / Contentful / 
 - 株式会社アドプロモート
 
 
-## 記事執筆
+## ✍️ 記事執筆
 
 - [DevelopersIO](https://dev.classmethod.jp/author/kiyota-takashi/)
 - [Zenn](https://zenn.dev/kiiiyo)
