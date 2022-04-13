@@ -51,8 +51,28 @@
     @apply mt-0;
   }
 
+  .markdown p {
+    @apply leading-7;
+  }
+
   .markdown ul {
     @apply pl-8;
+  }
+
+  .markdown a:link {
+    @apply underline text-neutral-500;
+  }
+
+  .markdown a:visited {
+    @apply underline text-neutral-500;
+  }
+
+  .markdown a:hover {
+    @apply underline text-neutral-400;
+  }
+
+  .markdown a:active {
+    @apply underline text-neutral-600;
   }
 
   .markdown ul > li {
