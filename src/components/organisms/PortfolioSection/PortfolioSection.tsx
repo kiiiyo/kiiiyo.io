@@ -36,7 +36,7 @@ export const PortfolioSectionPresenter: FC = () => {
             <div className="bg-gray-800 rounded-xl border border-gray-100 hover:border-white shadow-md hover:shadow-lg transition">
               <div className="flex justify-between items-center py-2.5 px-5 bg-gray-50 rounded-t-lg border-b border-gray-200">
                 <div className="text-lg font-medium text-gray-500">Space UI Kit</div>
-                <Link href="/">
+                <Link href="/portfolios/space-ui-kit">
                   <a>
                     <Atoms.Icon.LinkIcon className="w-5 h-5" />
                   </a>
