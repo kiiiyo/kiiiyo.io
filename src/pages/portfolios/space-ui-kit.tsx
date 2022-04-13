@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -21,22 +21,41 @@ const PortfolioSpaceUiKitPage: NextPage = () => {
     <Pages.PortfolioSinglePage
       hero={<Hero />}
       sidebar={
-        <>
-          <Link href="https://github.com/kiiiyo/space-ui-kit">
-            <a target="_blank">
-              <div className="flex items-center p-4 h-full bg-white hover:bg-neutral-50 active:bg-neutral-100 rounded-md shadow-sm">
-                <div className="mr-3">
-                  <Image width="32" height="32" alt="Github" src="/icon-github.svg" />
+        <Fragment>
+          <div>
+            <Link href="https://space-ui-kit.vercel.app/en/">
+              <a target="_blank">
+                <div className="flex items-center p-4 h-full bg-white hover:bg-neutral-50 active:bg-neutral-100 rounded-md shadow-sm">
+                  <div className="mr-3">
+                    <div className="flex justify-center items-center w-10 h-10 bg-neutral-800 rounded-lg">
+                      <Atoms.Icon.GlobeIcon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-neutral-800">Demo Page</h2>
+                  </div>
+                  <Atoms.Icon.ExternalLinkIcon className="ml-auto w-6 text-neutral-400" />
                 </div>
-                <div>
-                  <h2 className="font-bold text-neutral-800">Github</h2>
-                  <p className="text-sm text-neutral-400">Public</p>
+              </a>
+            </Link>
+          </div>
+          <div className="mt-6">
+            <Link href="https://github.com/kiiiyo/space-ui-kit">
+              <a target="_blank">
+                <div className="flex items-center p-4 h-full bg-white hover:bg-neutral-50 active:bg-neutral-100 rounded-md shadow-sm">
+                  <div className="mr-3">
+                    <Image width="32" height="32" alt="Github" src="/icon-github.svg" />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-neutral-800">Github</h2>
+                    <p className="text-sm text-neutral-400">Public</p>
+                  </div>
+                  <Atoms.Icon.ExternalLinkIcon className="ml-auto w-6 text-neutral-400" />
                 </div>
-                <Atoms.Icon.ExternalLinkIcon className="ml-auto w-6 text-neutral-400" />
-              </div>
-            </a>
-          </Link>
-        </>
+              </a>
+            </Link>
+          </div>
+        </Fragment>
       }
     >
       メイン
