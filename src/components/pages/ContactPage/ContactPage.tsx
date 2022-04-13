@@ -1,15 +1,20 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 //
 import { Templates, Organisms } from '@/components'
 
-export const ContactPage: FC = () => {
+export type ContactPageProps = {
+  hero: ReactNode
+}
+
+export const ContactPage: FC<ContactPageProps> = ({ hero, children }) => {
   return (
-    <Templates.GenericTemplate
+    <Templates.SingleTemplate
       globalHeader={<Organisms.GlobalHeader state={{ currentPage: 'CONTACT' }} />}
       globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'CONTACT' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
+      hero={hero}
     >
-      <p>ContactPage</p>
-    </Templates.GenericTemplate>
+      {children}
+    </Templates.SingleTemplate>
   )
 }

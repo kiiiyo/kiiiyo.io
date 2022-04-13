@@ -9,11 +9,11 @@ export const HeroSectionPresenter: FC = () => {
     <>
       <section>
         <div className="bg-black">
-          <div className="md:w-full mx-auto">
-            <div className="relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden blur-3xl">
+          <div className="mx-auto md:w-full">
+            <div className="overflow-hidden relative">
+              <div className="overflow-hidden absolute inset-0 blur-3xl">
                 <div
-                  className="absolute animate-hero-bg-loop-first opacity-50"
+                  className="absolute opacity-50 animate-hero-bg-loop-first"
                   style={{
                     width: 700,
                     height: 700,
@@ -26,7 +26,7 @@ export const HeroSectionPresenter: FC = () => {
                   }}
                 ></div>
                 <div
-                  className="absolute animate-hero-bg-loop-second opacity-50"
+                  className="absolute opacity-50 animate-hero-bg-loop-second"
                   style={{
                     width: 600,
                     height: 600,
@@ -39,7 +39,7 @@ export const HeroSectionPresenter: FC = () => {
                   }}
                 ></div>
                 <div
-                  className="absolute animate-hero-bg-loop-third opacity-50"
+                  className="absolute opacity-50 animate-hero-bg-loop-third"
                   style={{
                     width: 500,
                     height: 500,
@@ -52,11 +52,11 @@ export const HeroSectionPresenter: FC = () => {
                   }}
                 ></div>
               </div>
-              <div className="flex flex-col relative items-center justify-center lg:py-32 py-12">
-                <h1 className="font-bold lg:text-8xl text-6xl text-center tracking-tight text-white">Hello, world</h1>
-                <p className="text-white text-center lg:mt-12 mt-4 px-36">
+              <div className="flex relative flex-col justify-center items-center py-12 lg:py-24">
+                <h1 className="text-6xl font-bold tracking-tight text-center text-white lg:text-8xl">Hello, world</h1>
+                {/* <p className="px-36 mt-4 text-center text-white lg:mt-12">
                   TextTextTextTextTextTextTextTextTextTextTextTextText
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
