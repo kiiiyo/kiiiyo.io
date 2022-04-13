@@ -1,8 +1,10 @@
 export const document = `
-  ## Overview
+# 💡 Overview
 
-  ## Contact as
+ご連絡方法について、以下のGoogle Formのリンクよりお問い合わせください。
 
-  - Google Form
+## 📮 Contact as
+
+- [Google Form](https://forms.gle/PzrJUQJQcQkKN8ir5)
 
 `
