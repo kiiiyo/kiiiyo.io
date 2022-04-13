@@ -56,7 +56,7 @@ HTML / CSS / JavaScript / TypeScript / Node.js / Ruby
 React / Strapi / Express / GraphQL / Firebase / Vite / Contentful / Cypress / MUI / Bootstrap
 
 
-## 職務経歴詳細
+## 職務経歴概要
 
 - クラスメソッド株式会社
 - フリーランス
