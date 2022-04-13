@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* stylelint-disable scss/at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
@@ -38,7 +39,23 @@
 
   /* markdown */
 
+  .markdown h1 {
+    @apply font-bold text-2xl text-neutral-500 mt-0 pb-2 border-b-2 mb-4;
+  }
+
   .markdown h2 {
-    @apply font-bold;
+    @apply font-bold text-xl text-neutral-500 mt-12 mb-4;
+  }
+
+  .markdown h2:first-child {
+    @apply mt-0;
+  }
+
+  .markdown ul {
+    @apply pl-8;
+  }
+
+  .markdown ul > li {
+    @apply list-disc my-1;
   }
 }

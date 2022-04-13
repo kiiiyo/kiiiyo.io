@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 //
 import { Pages } from '@/components'
 //
-import { document } from './document'
+import { document } from '@/documents/contact'
 
 const Hero: FC = () => {
   return (

@@ -7,7 +7,7 @@ import { AboutSection } from './AboutSection'
 import { PortfolioSection } from './PortfolioSection'
 import { ContactSection } from './ContactSection'
 //
-import { ContactCard } from './ContactCard'
+//import { ContactCard } from './ContactCard'
 
 export {
   GlobalHeader,
@@ -16,6 +16,6 @@ export {
   HeroSection,
   AboutSection,
   PortfolioSection,
-  ContactSection,
-  ContactCard
+  ContactSection
+  //ContactCard
 }

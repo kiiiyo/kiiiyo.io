@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 //
 import { Pages, Atoms } from '@/components'
 // TODO: MDXにする
-import { document } from './document'
+import { document } from '@/documents/space-ui-kit'
 
 const Hero: FC = () => {
   return (
