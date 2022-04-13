@@ -53,7 +53,7 @@ HTML / CSS / JavaScript / TypeScript / Node.js / Ruby
 ## フレームワーク・その他
 
 
-React / Strapi / Express / GraphQL / Firebase / Vite / Contentful / Cypress / MUI / Bootstrap
+React / Strapi / Express / GraphQL / AWS / GCP / Firebase / Vite / Contentful / Algolia / Cypress / MUI / Bootstrap / Sentry / Blender / Maya
 
 
 ## 職務経歴概要
