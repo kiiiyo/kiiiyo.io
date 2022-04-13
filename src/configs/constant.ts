@@ -22,7 +22,7 @@ export const GLOBAL_MENU_LIST = [
     emoji: '🗂️',
     name: 'PORTFOLIO',
     label: 'Portfolio',
-    path: '/portfolio'
+    path: '/portfolios'
   },
   {
     emoji: '📬',

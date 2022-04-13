@@ -1,5 +1,5 @@
 import { FC, CSSProperties } from 'react'
-import { MenuIcon, XIcon as CloseIcon, LinkIcon } from '@heroicons/react/solid'
+import { MenuIcon, XIcon as CloseIcon, LinkIcon, ExternalLinkIcon, GlobeIcon } from '@heroicons/react/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
@@ -25,6 +25,8 @@ export {
   MenuIcon,
   CloseIcon,
   LinkIcon,
+  ExternalLinkIcon,
+  GlobeIcon,
   //
   TwitterIcon,
   FacebookIcon,

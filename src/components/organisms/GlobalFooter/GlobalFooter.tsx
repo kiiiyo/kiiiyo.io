@@ -47,7 +47,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
   return (
     <footer>
       <div className="py-8 pb-36 bg-white lg:pt-24 lg:pb-48">
-        <div className="container px-8 mx-auto md:px-0">
+        <div className="container px-8 mx-auto md:px-6">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-8">
             <div className="col-span-2">
               <div className="flex justify-between items-center">
@@ -65,10 +65,6 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
               <ul>
                 {Constant.GLOBAL_MENU_LIST.map((menuItem: TMenuItem, index: number) => {
                   const isCurrent = menuItem.name === currentPage
-
-                  console.log('menuItem.name', menuItem.name)
-                  console.log('currentPage', currentPage)
-                  console.log('isCurrent', isCurrent)
                   return (
                     <li key={index} className="mt-6">
                       <Link href={menuItem.path}>

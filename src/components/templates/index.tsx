@@ -1,4 +1,5 @@
 import { GenericTemplate } from './GenericTemplate'
+import { PortfolioSingleTemplate } from './PortfolioSingleTemplate'
 import { HomeTemplate } from './HomeTemplate'
 
-export { GenericTemplate, HomeTemplate }
+export { PortfolioSingleTemplate, GenericTemplate, HomeTemplate }

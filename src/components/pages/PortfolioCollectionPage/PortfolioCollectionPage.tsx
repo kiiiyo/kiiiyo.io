@@ -9,7 +9,7 @@ export const PortfolioCollectionPage: FC = () => {
       globalFooter={<Organisms.GlobalFooter state={{ currentPage: 'PORTFOLIO' }} />}
       OverlayMenu={<Organisms.OverlayMenu />}
     >
-      <p>PortfolioCollectionPage</p>
+      <Organisms.PortfolioSection />
     </Templates.GenericTemplate>
   )
 }

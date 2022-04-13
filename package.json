@@ -28,10 +28,12 @@
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-markdown": "^8.0.2",
     "sass": "^1.47.0",
     "tailwindcss-classnames": "^3.0.2"
   },
   "devDependencies": {
+    "@next/mdx": "^12.1.5",
     "@swc/core": "^1.2.128",
     "@swc/jest": "^0.2.16",
     "@testing-library/dom": "^8.11.1",
