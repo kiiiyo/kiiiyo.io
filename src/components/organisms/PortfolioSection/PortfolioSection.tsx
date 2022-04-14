@@ -11,7 +11,6 @@ export const PortfolioSectionPresenter: FC = () => {
     <div className="bg-neutral-100">
       <section>
         <div className="py-12 px-4 mx-auto md:px-8 md:pt-16 md:pb-24 md:max-w-4xl">
-          <h2 className="mb-8 text-4xl font-bold text-center text-neutral-800 md:text-left">Portfolio</h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="bg-blue-500 rounded-xl border border-gray-100 hover:border-white shadow-lg hover:shadow-xl transition">
               <div className="flex justify-between items-center py-2.5 px-5 bg-white rounded-t-lg border-b border-neutral-200">

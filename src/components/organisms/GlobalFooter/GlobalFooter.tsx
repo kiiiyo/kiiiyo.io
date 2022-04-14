@@ -69,7 +69,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
                     <li key={index} className="mt-6">
                       <Link href={menuItem.path}>
                         <a
-                          className={` text-neutral-500 hover:text-neutral-400 active:text-neutral-600 hover:underline ${
+                          className={` text-neutral-500 hover:text-neutral-400 active:text-neutral-600 ${
                             isCurrent ? 'font-bold ' : ''
                           }`}
                         >
@@ -90,7 +90,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
                   return (
                     <li key={index} className="mt-6">
                       <Link href={linkItem.path}>
-                        <a target="_blank" className="font-normal text-neutral-500 hover:underline">
+                        <a target="_blank" className="text-neutral-500 hover:text-neutral-400 active:text-neutral-600">
                           <span className="inline-block">{linkItem.label}</span>
                         </a>
                       </Link>
