@@ -32,7 +32,7 @@ export const OverlayMenuPresenter: FC<OverlayMenuPresenterProps> = ({
       <div className="flex items-center px-4 min-h-screen bg-gray-500 transition-opacity">
         <div className="fixed top-0 left-0 py-2.5 px-4">
           <Link href="/">
-            <a className="text-2xl font-bold text-white">Brand</a>
+            <a className="text-2xl font-bold text-white">{Constant.SITE_NAME}</a>
           </Link>
         </div>
         <div className="fixed top-0 right-0 py-2.5 px-4">

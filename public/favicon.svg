@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="favicon">
+<rect width="32" height="32" fill="white"/>
+<rect id="shape" x="6" y="14" width="4" height="18" fill="#010101"/>
+<rect id="shape_2" x="6" y="8" width="4" height="4" fill="#010101"/>
+<rect id="shape_3" x="14" y="14" width="4" height="18" fill="#010101"/>
+<rect id="shape_4" x="14" y="8" width="4" height="4" fill="#010101"/>
+<rect id="shape_5" x="22" y="14" width="4" height="18" fill="#010101"/>
+<rect id="shape_6" x="22" y="8" width="4" height="4" fill="#010101"/>
+</g>
+</svg>
