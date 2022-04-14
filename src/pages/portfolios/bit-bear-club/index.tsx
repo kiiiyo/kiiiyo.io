@@ -24,7 +24,7 @@ const BitBearClubPage: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Portfolio - Kiiiyo&#39;s.IO</title>
+        <title>🐻 Bit Bear Club - Kiiiyo&#39;s.IO</title>
       </Head>
       <Pages.PortfolioSinglePage
         hero={<Hero />}

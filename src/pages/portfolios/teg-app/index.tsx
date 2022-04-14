@@ -24,7 +24,7 @@ const TegAppPage: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Portfolio - Kiiiyo&#39;s.IO</title>
+        <title>📋 Teg App - Kiiiyo&#39;s.IO</title>
       </Head>
       <Pages.PortfolioSinglePage
         hero={<Hero />}
