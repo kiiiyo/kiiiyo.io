@@ -57,7 +57,7 @@ export const GlobalFooterPresenter: FC<TGlobalFooterPresenterProps> = ({ state: 
                   </a>
                 </Link>
               </div>
-              <p className="my-4 text-lg text-neutral-400">Kiiiyo&#39;s Web Site.</p>
+              <p className="my-4 text-lg text-neutral-400">Kiiiyo&#39;s Portfolio Web Site.</p>
             </div>
             {/* */}
             <div>
