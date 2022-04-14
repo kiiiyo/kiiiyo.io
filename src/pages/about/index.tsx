@@ -1,6 +1,8 @@
+import { Fragment } from 'react'
+import ReactMarkdown from 'react-markdown'
+import Head from 'next/head'
 import type { FC } from 'react'
 import type { NextPage } from 'next'
-import ReactMarkdown from 'react-markdown'
 //
 import { Pages } from '@/components'
 //
@@ -60,11 +62,16 @@ const Hero: FC = () => {
 
 const AboutPage: NextPage = () => {
   return (
-    <Pages.AboutPage hero={<Hero />}>
-      <div className="markdown">
-        <ReactMarkdown>{document}</ReactMarkdown>
-      </div>
-    </Pages.AboutPage>
+    <Fragment>
+      <Head>
+        <title>About - Kiiiyo&#39;s.IO</title>
+      </Head>
+      <Pages.AboutPage hero={<Hero />}>
+        <div className="markdown">
+          <ReactMarkdown>{document}</ReactMarkdown>
+        </div>
+      </Pages.AboutPage>
+    </Fragment>
   )
 }
 

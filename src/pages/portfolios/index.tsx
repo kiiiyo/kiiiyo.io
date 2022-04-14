@@ -1,4 +1,5 @@
-import type { FC } from 'react'
+import { FC, Fragment } from 'react'
+import Head from 'next/head'
 import type { NextPage } from 'next'
 //
 import { Pages } from '@/components'
@@ -56,7 +57,14 @@ const Hero: FC = () => {
 }
 
 const PortfolioCollectionPage: NextPage = () => {
-  return <Pages.PortfolioCollectionPage hero={<Hero />} />
+  return (
+    <Fragment>
+      <Head>
+        <title>Portfolio - Kiiiyo&#39;s.IO</title>
+      </Head>
+      <Pages.PortfolioCollectionPage hero={<Hero />} />
+    </Fragment>
+  )
 }
 
 export default PortfolioCollectionPage
