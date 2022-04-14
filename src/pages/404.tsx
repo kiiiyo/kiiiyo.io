@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 //
 import { Pages } from '@/components'
@@ -60,11 +61,16 @@ const Hero: FC = () => {
 
 const NotFoundPage: NextPage = () => {
   return (
-    <Pages.NotFoundPage hero={<Hero />}>
-      <div className="markdown">
-        <ReactMarkdown>{document}</ReactMarkdown>
-      </div>
-    </Pages.NotFoundPage>
+    <>
+      <Head>
+        <title>Not Found - Kiiiyo&#39;s.IO</title>
+      </Head>
+      <Pages.NotFoundPage hero={<Hero />}>
+        <div className="markdown">
+          <ReactMarkdown>{document}</ReactMarkdown>
+        </div>
+      </Pages.NotFoundPage>
+    </>
   )
 }
 
